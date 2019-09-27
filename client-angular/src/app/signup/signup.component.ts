@@ -12,4 +12,9 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
   }
 
+  signupUser(event) {
+    event.preventDefault()
+    console.log(event)
+  }
+
 }
