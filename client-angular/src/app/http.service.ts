@@ -10,7 +10,7 @@ export class HttpService {
 
   getPost() {
     //This is a live hook that gets called when the component is loaded
-    //insert API end point in the parenthesis below
-    return this.http.get('');
+    //insert API end point for DB in the parenthesis below
+    return this.http.get('http://localhost:5550/test');
   }
 }
