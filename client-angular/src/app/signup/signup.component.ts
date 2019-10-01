@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,14 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  image: Object;
+
+  constructor(private _http: HttpService) { }
 
   ngOnInit() {
+    this._http.getPost().subscribe(data => {
+      this.image = data;
+      console.log(this.image);
+    })
   }
 
-  signupUser(event) {
-    event.preventDefault()
-    console.log(event)
-  }
+  // AuthService(event) {
+  //   event.preventDefault()
+  //   console.log(event)
+  // }
 
 }
