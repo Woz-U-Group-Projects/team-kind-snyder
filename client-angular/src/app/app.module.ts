@@ -10,9 +10,10 @@ import { SnapDayComponent } from './components/snap-day/snap-day.component';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
-  declarations: [AppComponent, ProjectDisplayComponent, SnapDayComponent, HomeComponent, SignupComponent, LoginComponent],
+  declarations: [AppComponent, ProjectDisplayComponent, SnapDayComponent, HomeComponent, SignupComponent, LoginComponent, PostComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,
     RouterModule.forRoot([
       {
@@ -26,7 +27,11 @@ import { LoginComponent } from './login/login.component';
       {
         path: 'signup',
         component:SignupComponent
-      }
+      },
+      {
+        path: 'post',
+        component:PostComponent
+      },
     ])],
   providers: [],
   bootstrap: [AppComponent]

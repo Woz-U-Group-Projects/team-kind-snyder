@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 //import { catchError, map, tap } from "rxjs/operator";
 import { Observable } from 'rxjs';
-import { post } from 'selenium-webdriver/http';
 import { Post } from './post';
 
 @Injectable({
