@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Post } from '../post';
 import { PostService } from '../post.service';
 
@@ -11,8 +11,7 @@ export class PostComponent implements OnInit {
   posts: Post[];
   newPost: Post = new Post();
 
-  @ViewChild("fileInput")
-  fileInput;
+  @ViewChild("fileInput", {static: false}) fileInput: ElementRef;
 
   onFileChanged($event) {
     this.newPost.image = $event.target.files[0];
