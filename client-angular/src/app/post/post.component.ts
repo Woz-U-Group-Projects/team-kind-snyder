@@ -11,8 +11,8 @@ export class PostComponent implements OnInit {
   posts: Post[];
   newPost: Post = new Post();
 
-  @ViewChild("fileInput")
-  fileInput;
+  // @ViewChild("fileInput")
+  // fileInput;
 
   onFileChanged($event) {
     this.newPost.image = $event.target.files[0];
