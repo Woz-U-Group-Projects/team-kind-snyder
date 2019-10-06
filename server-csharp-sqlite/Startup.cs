@@ -43,6 +43,8 @@ namespace server_csharp_sqlite
       });
       services.AddDbContext<ProjectDbContext>(options => options.UseSqlite("Data Source=project.db"));
       services.AddDbContext<UserDbContext>(options => options.UseSqlite("Data Source=project.db"));
+      //  Optional connection string: optionsBuilder.UseSqlite("Filename=MyDatabase.db");
+      
 
       // Identity configuration, types of data being used
       services.AddIdentity<IdentityUser, IdentityRole>()

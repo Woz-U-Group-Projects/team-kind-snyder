@@ -12,7 +12,7 @@ namespace server_csharp_sqlite.Controllers
   {
 
     [HttpPost]
-    public IActionResult Upload([FromForm] UploadForm myForm)
+    public IActionResult Upload([FromForm] UploadForm myForm, string saveid)
     {
       try
       {
@@ -34,7 +34,7 @@ namespace server_csharp_sqlite.Controllers
           var fileExtension = Path.GetExtension(fileName);
           // ex: 6154b7c7-b3a8-4b8c-af21-f2a069d1a022.jpg
           var newFileName = uniqueFileName + fileExtension;
-
+        string sql = "insert Tablename (name, datetime), (@name, @datetime))";
           var fullPath = Path.Combine(pathToSave, newFileName);
           using (var stream = new FileStream(fullPath, FileMode.Create))
           {
