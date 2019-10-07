@@ -4,24 +4,13 @@
 
 
 <div>
-  <form>
+  <form (submit)="signupUser($event)">
   <div class="form-group">
-  <label for="exampleInputEmail1">Email address</label>
-   <input type="email" class="form-control" id="validationCustom01" aria-describedby="emailHelp" placeholder="Enter email" required>
+   <input type="email" class="form-control" id="email" placeholder="Enter email" required>
   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  <div class="valid-feedback">
-      Looks Good!
-  </div>
-</div>
-<div>
-  <form>
+  <br>
   <div class="form-group">
-  <label for="exampleInputpassword1">Password</label>
-   <input type="password" class="form-control" id="validationCustom02" aria-describedby="passwordHelp" placeholder="Enter password" required>
+   <input type="password" class="form-control" id="password" placeholder="Enter password" required>
   <small id="passwordlHelp" class="form-text text-muted">Your password is safe with us.</small>
-  <div class="valid-feedback">
-      Looks Good!
-  </div>
 </div>
-<button class="btn btn-primary" type="submit">Sign me up!</button>
-
+<button class="btn btn-primary" type="submit">Sign me in!</button>

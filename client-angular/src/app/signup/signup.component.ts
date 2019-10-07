@@ -9,20 +9,22 @@ import { AuthService } from '../auth.service';
 })
 export class SignupComponent implements OnInit {
 
-  image: Object;
+  apiUrl: string = "http://localhost:5000/controller/account"
 
-  constructor(private _http: HttpService) { }
+  constructor(private auth: AuthService) { }
 
-  ngOnInit() {
-    this._http.getPost().subscribe(data => {
-      this.image = data;
-      console.log(this.image);
-    })
+  // apiUrl: string = "http://localhost:5000/controller/account"
+
+  ngOnInit() {}
+    AuthService(event) {
+      event.preventDefault()
+      console.log(event)
+    }
   }
 
-  // AuthService(event) {
-  //   event.preventDefault()
-  //   console.log(event)
-  // }
 
-}
+
+// this._http.getPost().subscribe(data => {
+//   this.image = data;
+//   console.log(this.image);
+// })
